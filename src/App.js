@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import FunctionCompo from "./Component/FunctionCompo";
+import ClassCompo from "./Component/ClassCompo";
+import { useState } from "react";
+import "./App.css"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [buttonOne,setButtonOne]=useState(false);
+  const [buttonTwo,setButtonTwo]=useState(false);
+
+  const handleFunction=()=>{
+    setButtonOne(!buttonOne)
+  }
+  const handleClass=()=>{
+    setButtonTwo(!buttonTwo)
+  }
+
+    return (
+    <>
+        <h1 className="heading">Styling Functional and Class Component</h1>
+        
+        <div className="flex1">
+           <button onClick={handleFunction} className="btn" id="btn1">To see styling in Functional Component</button>
+           <button onClick={handleClass} className="btn" id="btn2">To see styling in Class Component</button>
+        </div>
+
+        <div className="flex2">
+           {buttonOne?<FunctionCompo/>:null}
+           {buttonTwo?<ClassCompo/>:null}
+        </div>
+
+    </>
   );
 }
 
