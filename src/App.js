@@ -1,34 +1,28 @@
-import FunctionCompo from "./Component/FunctionCompo";
-import ClassCompo from "./Component/ClassCompo";
+import React from "react";
+import './App.css'
 import { useState } from "react";
-import "./App.css"
+import  Function from './Function'
+import Classs from "./Classs";
 
-function App() {
-  const [buttonOne,setButtonOne]=useState(false);
-  const [buttonTwo,setButtonTwo]=useState(false);
+function App(){
+  const [show,setshow]=useState(false)
+  const [showclass,setshowclass]=useState(false)
 
-  const handleFunction=()=>{
-    setButtonOne(!buttonOne)
+  const handleClick=()=>{
+    setshow(!show)
   }
   const handleClass=()=>{
-    setButtonTwo(!buttonTwo)
+    setshowclass(!showclass)
   }
-
-    return (
-    <>
-        <h1 className="heading">Styling Functional and Class Component</h1>
-        
-        <div className="flex1">
-           <button onClick={handleFunction} className="btn" id="btn1">To see styling in Functional Component</button>
-           <button onClick={handleClass} className="btn" id="btn2">To see styling in Class Component</button>
-        </div>
-
-        <div className="flex2">
-           {buttonOne?<FunctionCompo/>:null}
-           {buttonTwo?<ClassCompo/>:null}
-        </div>
-
-    </>
+ 
+  return(
+    <div className="app">
+      <h1>Styling Using Function And Class Component</h1><br></br>
+      <button onClick={handleClick} className="btn1">To see styling in Functional Component</button>
+      <button  onClick={handleClass} className="btn2">To see styling in Class Component</button>
+      {show ? <Function /> : " "}
+      {showclass ? <Classs />:" "}
+    </div>
   );
 }
 
