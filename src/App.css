@@ -1,55 +1,67 @@
 body{
-    background-image: radial-gradient(bisque, pink ,lightblue);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 600px;
-}
-.heading{
-    font-size: 50px;;
-    text-align: center;
-    text-shadow: 4px 2px 4px rgb(9, 233, 236);
-}
-.btn{
-    width:300px;
-    height:50px;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: darkgray;
-    font-weight: bold;
-    font-size: 13px;
-    margin:80px;
-}
-.btn:hover{
-    background-color:skyblue;
-}
-
-.flex1{
-    display: flex;
-    justify-content:center; 
-}
-.flex2{
-    display: flex;
-    justify-content:space-evenly; 
-}
-.box{
-    width:400px;
-    height:230px;
-    border: 1px solid black;
-    border-radius: 50px;
-    text-align: center;
-    padding-top: 15px;
-}
-#box1{
-    background-color: aqua;
-    position: fixed;
-    left:150px;
-}
-#box2{
-    background-color: palevioletred;
-    position: fixed;
-    right:150px;
-}
-.line3{
-    color:blue;
-}
-
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+} 
+ h1{
+  font-weight: bold;
+  text-align: center;
+  text-shadow:3px 3px 8px lightblue ;
+ }
+ .btn1,.btn2{
+  margin-left: 280px;
+  padding:10px;
+  text-align:center;
+  background-color: blue;
+  color: azure;
+  border-radius: 10px;
+  cursor: pointer;
+ }
+ .btn1:hover{
+  background-color:green;
+ }
+ .btn2:hover{
+  background-color:green;
+ }
+ .fc{
+  height:200px;
+  width:350px;
+  background-color:lightseagreen;
+  color:black;
+  border:2px solid black;
+  padding:8px;
+  border-radius:10px;
+  margin-top:150px;
+  margin-left:155px;
+ }
+ .fc h1{
+  font-weight:bold;
+  text-align:center;
+ }
+ .fc h4{
+  text-align: center;
+ }
+ .fc h5{
+  text-align: center;
+  color: blue;
+ }
+.cc{
+  height:200px;
+  width:350px;
+  background-color:lightsalmon;
+  color:black;
+  border:2px solid black;
+  padding:8px;
+  border-radius:10px;
+  margin-top:-225px;
+  margin-left:750px;
+ }
+ .cc h1{
+  font-weight:bold;
+  text-align:center;
+ }
+ .cc h4{
+  text-align: center;
+ }
+ .cc h5{
+  text-align: center;
+  color:blue;
+ }
